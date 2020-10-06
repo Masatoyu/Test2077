@@ -26,17 +26,31 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-
+     
+    <button id="btngiveSc">Add Score</button>
+    
     <button id="btnCal">Calculate</button>
     <script>
+    $(document).ready(function(){
+    $("#btngiveSc").click(function(){
+        getscore = $("#score option:selected").val()
+        
+       });
+    });
+
+
+
+
+
         $(document).ready(function(){
            $("#btnCal").click(function(){
-           getscore = $("#score option:selected").val()
+          
           
             
 
            });
         });
+
     </script>
 
 
