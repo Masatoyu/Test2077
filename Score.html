@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+   
+        Panuwat Duangkham
+        <select id="score1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <br>
+        Sorrawit Sompan
+        <select id="score2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <br>
+        Attapong Chuduang
+        <select id="score3">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    <br>
+
+    <button id="btnCal">Calculate</button>
+    <br>
+    <p id="showsc"></p>
+    <button>Back</button>
+    <script>
+  
+        $(document).ready(function(){
+           $("#btnCal").click(function(){
+           
+            var getscore1 = parseInt($("#score1 option:selected").val())
+            var getscore2 = parseInt($("#score2 option:selected").val())
+           var getscore3 = parseInt($("#score3 option:selected").val())
+               
+              
+          
+          var Totalsc = getscore1+getscore2+getscore3;
+          var avgsc = Totalsc/3;
+          $("#showsc").text("Score Average: "+avgsc);
+
+           });
+        });
+
+    </script>
+    
+
+
+</body>
+</html>
