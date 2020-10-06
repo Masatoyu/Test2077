@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var Member = [
+                { id: "6231302014", name: "Panuwat Duangkham" },
+                { id: "6231302016", name: "Sorrawit Sompan" },
+                { id: "6231302022", name: "Atthapong Chooduang" }
+            ]
+            $("button").click(function () {
+                var search;
+                search = $("#textSearch").val();
+                for (i in Member) {
+                    if (search == Member[i].id) {
+                        $("#Show").html(`ID: ${Member[i].id} Name: ${Member[i].name} `);
+                    }
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form-group">
+        <label for="">Search Member's</label>
+        <input type="text" class="form-control" name="textinput" id="textSearch"
+            placeholder="Type here to search Member's ID">
+    </div>
+    <button type="button" class="btn btn-primary">Search</button>
+    <br>
+    <h3 id="Show">
+</body>
+
+</html>
